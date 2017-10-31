@@ -1,0 +1,27 @@
+plugins{
+    id 'java'
+    id 'war'
+    id 'idea'
+    id 'org.akhikhl.gretty' version '1.4.2'
+    id 'eclipse'
+}
+
+repositories{
+    jcenter()
+}
+dependencies{
+    // Jersey REST.
+    compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.25.1'
+
+    //Added AWS SDK for Dynamo DB.
+    compile  'com.amazonaws:aws-java-sdk:1.11.106'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok-maven
+    compile group: 'org.projectlombok', name: 'lombok-maven', version: '1.16.18.1', ext: 'pom'
+
+    // Test Dependency.
+    testCompile 'junit:junit:4.12'
+
+
+}
