@@ -8,6 +8,9 @@ plugins{
 
 repositories{
     jcenter()
+    maven {
+        url 'http://dynamodb-local.s3-website-us-west-2.amazonaws.com/release'
+    }
 }
 dependencies{
     // Jersey REST.
@@ -15,13 +18,21 @@ dependencies{
 
     //Added AWS SDK for Dynamo DB.
     compile  'com.amazonaws:aws-java-sdk:1.11.106'
+
+    //Dynamo Local
+    compile group: 'com.amazonaws', name: 'DynamoDBLocal', version: '1.11.0'
     providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
 
     // https://mvnrepository.com/artifact/org.projectlombok/lombok-maven
-    compile group: 'org.projectlombok', name: 'lombok-maven', version: '1.16.18.1', ext: 'pom'
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.16.4'
 
     // Test Dependency.
     testCompile 'junit:junit:4.12'
 
 
+}
+
+
+task aws{
+    print "$System.env.AWS_SECRET_ACCESS_KEY"
 }
