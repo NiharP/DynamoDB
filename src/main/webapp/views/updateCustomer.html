@@ -1,0 +1,35 @@
+<div>
+    <h1>Update Customer</h1>
+    <form name="customerUpdateForm" ng-submit="submitUpdateForm()" novalidate>
+
+        <!-- CustomerID -->
+        <div ng-class="{ 'has-error' : customerUpdateForm.customerId.$invalid && !customerUpdateForm.customerId.$pristine }">
+            <label>CustomerId:</label>
+            <input type="text" name="customerId" class="form-control" ng-model="selectedCustomer.customerId" ng-disabled="true">
+        </div>
+
+        <!-- FIRSTNAME -->
+        <div ng-class="{ 'has-error' : customerUpdateForm.firstName.$invalid && !customerUpdateForm.firstName.$pristine }">
+            <label>First Name:</label>
+            <input type="text" name="firstName" class="form-control" ng-model="selectedCustomer.firstName"  ng-minlength="1" required>
+            <p ng-show="customerUpdateForm.firstName.$invalid && !customerUpdateForm.firstName.$pristine" class="help-block">FirstName should not be blank</p>
+        </div>
+
+        <!-- LASTNAME -->
+        <div ng-class="{ 'has-error' : customerUpdateForm.lastName.$invalid && !customerUpdateForm.lastName.$pristine }">
+            <label>Last Name:</label>
+            <input type="text" name="lastName" class="form-control" ng-model="selectedCustomer.lastName" required="true">
+            <p ng-show="customerUpdateForm.lastName.$invalid && !customerUpdateForm.lastName.$pristine" class="help-block">LastName should not be blank</p>
+        </div>
+
+        <!-- Address -->
+        <div ng-class="{ 'has-error' : customerUpdateForm.address.$invalid && !customerUpdateForm.address.$pristine }">
+            <label>Billing Address:</label>
+            <input type="textarea" name="address" class="form-control" ng-model="selectedCustomer.billingAddress">
+            <p ng-show="customerUpdateForm.address.$invalid && !customerUpdateForm.address.$pristine" class="help-block">Address should not be blank</p>
+        </div>
+        <button type="cancel" class="btn-primary" ng-click="cancelUpdateForm()" value="Cancel">Cancel</button>
+        <button type="submit" class="btn-primary" ng-disabled="customerUpdateForm.$invalid">Submit</button>
+
+    </form>
+</div>

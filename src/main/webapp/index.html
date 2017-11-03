@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="airbnbApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Airbnb Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script type="text/javascript" src="js/controllers/airbnbApp.js"></script>
+    <script type="text/javascript" src="js/controllers/customerController.js"></script>
+    <script type="text/javascript" src="js/controllers/addCustomerController.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+</head>
+<body>
+<div id="main">
+    <!-- The navigation menu will get the value of the "active" variable as a class.
+         The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+
+    <nav class="{{active}}" ng-click="$event.preventDefault()">
+
+        <!-- When a link in the menu is clicked, we set the active variable -->
+        <a href="#/searchProperty" class="searchProperty" ng-click="active='searchProperty'">Search Property</a>
+        <a href="#/addCustomer" class="addCustomer" ng-click="active='addCustomer'">Add Customer</a>
+        <a href="#/customerDetails" class="customerDetails" ng-click="active='customerDetails'">Customer Details</a>
+    </nav>
+
+    <p ng-hide="active">Please click a menu item</p>
+</div>
+<div ng-view>
+    <!-- Views are added here at runtime. -->
+</div>
+
+</body>
+</html>
