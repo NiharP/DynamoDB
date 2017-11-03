@@ -8,3 +8,6 @@ Steps to install.
 4. To run application : gradle jettyRun (Make sure that no service is using 8080 port)
 5. You can see hello world at http://localhost:8080/DynamoProject/rest/hello.
 6. Add lombok plugin https://projectlombok.org/ to your IDE.
+7. Add AWS credentials as Environment variables. 
+    AWS_ACCESS_KEY_ID = A****************Q
+    AWS_SECRET_ACCESS_KEY = v*****************************l
