@@ -81,5 +81,20 @@ function ($scope, $location, $routeParams,$http){
 airbnbApp.controller('searchPropertyController',
     function ($scope, $location, $routeParams,$http){
      console.log('Called the Search Property Controller.');
+     $scope.isResults  =  false;
+     console.log($scope.city);
+     $scope.search = function(){
 
-});
+       console.log("Inside Search Function.")
+       console.log($scope.city);
+
+       $http.get('http://localhost:8080/DynamoProject/rest/getListings/'+$scope.city).success(function(data, status, headers, config) {
+         console.log(data)
+         $scope.listings = data;
+         $scope.isResults = trufe;
+         console.log(JSON.stringify(data));
+       });
+     }
+    }
+);
+

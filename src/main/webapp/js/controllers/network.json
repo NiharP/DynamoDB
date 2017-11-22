@@ -1,0 +1,145 @@
+{
+  "startedDateTime": "2017-11-04T02:53:29.924Z",
+  "time": 11.01141200272832,
+  "request": {
+    "method": "GET",
+    "url": "https://clients1.google.com/generate_204",
+    "httpVersion": "http/2.0",
+    "headers": [{
+      "name": ":path",
+      "value": "/generate_204"
+    }, {
+      "name": "pragma",
+      "value": "no-cache"
+    }, {
+      "name": "cookie",
+      "value": "HSID=Acrle4S-tT8QswUmE; SSID=AEo6Y2ZDGbHA3JYb9; APISID=6S-YWTM-tGqAU634/AH-4ffxXZsh9vX39U; SAPISID=5Y4dBeFXOeYmjJYd/Ar8Edp83QYInGI-mY; SID=WwWMCrHRZUtmqtfdR6oMmZ5_bKwoOZvjn34ma2IxXJNrnyo4Fp9mjdTvc2R0EvYImqA-Dg.; NID=116=laV-noorGx5CiNc9ZSWy9xG9dLvsy8EAQuUjzrBHfQmFTkKKH4WEnEhyaz913E4kXwRN336JActk85hZV68b925sTioBVTxDIQSBU21iFeRwd3NRXRcLjFVtPLEDPMT854_160yzKKK-VhZHqhF6HM4yfxYZrURg2UlJAVxFBsajFboI5fuYoNUXcwQkX7blpZO2kwX_Bzbabu6SPHCNUuuapI7sYa36njV9MO-o3DDfm4DVSC3YkfC3xbQjetSvXOOgl4vrlYhSVLt_3o8RzgkeeW37F5QAezJddNcD06dhIadHZmfcyHDtfMVaQ5C18Dl9i4_gkPB6t8LDffmdH0NiOr-T3o4Fld87S5vDNiwts37tUrKAN9M; 1P_JAR=2017-11-4-2; SIDCC=AE4kn7_CUGMIqG2E3irqchgkUqrmVXzYgtyIvHMw1CRuwfjygufOLbB0crV5u4ai2W0f4Mt5VcLSs6rJ_Anv"
+    }, {
+      "name": "accept-encoding",
+      "value": "gzip, deflate, br"
+    }, {
+      "name": "accept-language",
+      "value": "en-US,en;q=0.9"
+    }, {
+      "name": "user-agent",
+      "value": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36"
+    }, {
+      "name": "x-chrome-uma-enabled",
+      "value": "1"
+    }, {
+      "name": "accept",
+      "value": "image/webp,image/apng,image/,/*;q=0.8"
+    }, {
+      "name": "cache-control",
+      "value": "no-cache"
+    }, {
+      "name": ":authority",
+      "value": "clients1.google.com"
+    }, {
+      "name": "referer",
+      "value": "https://developer.chrome.com/extensions/devtools_network"
+    }, {
+      "name": ":scheme",
+      "value": "https"
+    }, {
+      "name": "x-client-data",
+      "value": "CI+2yQEIpbbJAQjBtskBCPqcygEIqZ3KAQj/osoBCKijygE="
+    }, {
+      "name": ":method",
+      "value": "GET"
+    }],
+    "queryString": [],
+    "cookies": [{
+      "name": "HSID",
+      "value": "Acrle4S-tT8QswUmE",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }, {
+      "name": "SSID",
+      "value": "AEo6Y2ZDGbHA3JYb9",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }, {
+      "name": "APISID",
+      "value": "6S-YWTM-tGqAU634/AH-4ffxXZsh9vX39U",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }, {
+      "name": "SAPISID",
+      "value": "5Y4dBeFXOeYmjJYd/Ar8Edp83QYInGI-mY",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }, {
+      "name": "SID",
+      "value": "WwWMCrHRZUtmqtfdR6oMmZ5_bKwoOZvjn34ma2IxXJNrnyo4Fp9mjdTvc2R0EvYImqA-Dg.",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }, {
+      "name": "NID",
+      "value": "116=laV-noorGx5CiNc9ZSWy9xG9dLvsy8EAQuUjzrBHfQmFTkKKH4WEnEhyaz913E4kXwRN336JActk85hZV68b925sTioBVTxDIQSBU21iFeRwd3NRXRcLjFVtPLEDPMT854_160yzKKK-VhZHqhF6HM4yfxYZrURg2UlJAVxFBsajFboI5fuYoNUXcwQkX7blpZO2kwX_Bzbabu6SPHCNUuuapI7sYa36njV9MO-o3DDfm4DVSC3YkfC3xbQjetSvXOOgl4vrlYhSVLt_3o8RzgkeeW37F5QAezJddNcD06dhIadHZmfcyHDtfMVaQ5C18Dl9i4_gkPB6t8LDffmdH0NiOr-T3o4Fld87S5vDNiwts37tUrKAN9M",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }, {
+      "name": "1P_JAR",
+      "value": "2017-11-4-2",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }, {
+      "name": "SIDCC",
+      "value": "AE4kn7_CUGMIqG2E3irqchgkUqrmVXzYgtyIvHMw1CRuwfjygufOLbB0crV5u4ai2W0f4Mt5VcLSs6rJ_Anv",
+      "expires": null,
+      "httpOnly": false,
+      "secure": false
+    }],
+    "headersSize": -1,
+    "bodySize": 0
+  },
+  "response": {
+    "status": 204,
+    "statusText": "",
+    "httpVersion": "http/2.0",
+    "headers": [{
+      "name": "status",
+      "value": "204"
+    }, {
+      "name": "date",
+      "value": "Sat, 04 Nov 2017 02:53:29 GMT"
+    }, {
+      "name": "alt-svc",
+      "value": "quic=\":443\"; ma=2592000; v=\"41,39,38,37,35\""
+    }, {
+      "name": "content-length",
+      "value": "0"
+    }],
+    "cookies": [],
+    "content": {
+      "size": 0,
+      "mimeType": "text/plain"
+    },
+    "redirectURL": "",
+    "headersSize": -1,
+    "bodySize": -1,
+    "_transferSize": 13
+  },
+  "cache": {},
+  "timings": {
+    "blocked": 0.8234119802946226,
+    "dns": -1,
+    "ssl": -1,
+    "connect": -1,
+    "send": 0.18500001169741498,
+    "wait": 11.215000005904582,
+    "receive": 0.7880000048317015,
+    "_blocked_queueing": 0.41199999395757914
+  },
+  "serverIPAddress": "172.217.10.142",
+  "connection": "266963",
+  "pageref": "page_1"
+}

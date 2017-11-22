@@ -32,7 +32,19 @@ dependencies{
 
 }
 
+task copyNativeDeps(type: Copy) {
+    from (configurations.testCompile) {
+        include "*.dylib"
+        include "*.so"
+        include "*.dll"
+    }
+    into 'build/libs'
+}
 
+test.dependsOn copyNativeDeps
+test.doFirst {
+    systemProperty "java.library.path", 'build/libs'
+}
 task aws{
     print "$System.env.AWS_SECRET_ACCESS_KEY"
 }
