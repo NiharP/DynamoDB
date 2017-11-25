@@ -3,11 +3,13 @@ package com.dynamo.connection;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.document.*;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
 import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.amazonaws.services.dynamodbv2.model.*;
+import com.dynamo.model.Listing;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -62,6 +64,24 @@ public class Connection {
             System.err.println(e.getMessage());
         }
         System.out.println("Success.");
+
+    }
+
+    public Boolean addListing(Listing listing) {
+        Table table = dynamoDB.getTable(listings);
+
+        Item item = new Item()
+                .withPrimaryKey("Id", listing.getId())
+                .withString("Name",listing.getName())
+                .withString("City", listing.getCity())
+                .withString("Location", listing.getLocation())
+                .withString("Address", listing.getAddress())
+                .withNumber("PinCode", listing.getPinCode())
+                .withNumber("Price", listing.getPrice())
+                .withString("Descriptor", listing.getDescriptor())
+                .withString("HouseType", listing.getHouseType());
+        table.putItem(item);
+        return true;
 
     }
 
@@ -193,39 +213,39 @@ public class Connection {
             System.out.println("Adding data to " + tableName);
 
             Item item = new Item()
-                    .withPrimaryKey("Id", 101)
+                    .withPrimaryKey("Id", 101L)
                     .withString("Name", "First Property")
                     .withNumber("HostId", 111)
                     .withString("Location", "John Street")
                     .withString("City", "New York")
                     .withJSON("PropertyInfo", JOHN_PROPERTY)
-                    .withNumber("PinCode", 14623)
+                    .withNumber("PinCode", 14623L)
                     .withStringSet("Reviews", REVIEWS)
                     .withBoolean("IsAvailable", true)
                     .withString("HouseType", "OwnedHouse");
             table.putItem(item);
 
             item = new Item()
-                    .withPrimaryKey("Id", 103)
+                    .withPrimaryKey("Id", 103L)
                     .withString("Name", "Second Property")
                     .withNumber("HostId", 111)
                     .withString("Location", "John Street")
                     .withString("City", "New York")
                     .withJSON("PropertyInfo", JOHN_PROPERTY)
-                    .withNumber("PinCode", 14623)
+                    .withNumber("PinCode", 14623L)
                     .withStringSet("Reviews", REVIEWS)
                     .withBoolean("IsAvailable", true)
                     .withString("HouseType", "OwnedHouse");
             table.putItem(item);
 
             item = new Item()
-                    .withPrimaryKey("Id", 105)
+                    .withPrimaryKey("Id", 105L)
                     .withString("Name", "Third Property")
                     .withNumber("HostId", 111)
                     .withString("Location", "John Street")
                     .withJSON("PropertyInfo", JOHN_PROPERTY)
                     .withString("City", "Rochester")
-                    .withNumber("PinCode", 14623)
+                    .withNumber("PinCode", 14623L)
                     .withStringSet("Reviews", REVIEWS)
                     .withBoolean("IsAvailable", true)
                     .withString("HouseType", "OwnedHouse");

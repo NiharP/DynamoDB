@@ -91,10 +91,45 @@ airbnbApp.controller('searchPropertyController',
        $http.get('http://localhost:8080/DynamoProject/rest/getListings/'+$scope.city).success(function(data, status, headers, config) {
          console.log(data)
          $scope.listings = data;
-         $scope.isResults = trufe;
+         $scope.isResults = true;
          console.log(JSON.stringify(data));
        });
      }
     }
 );
+
+airbnbApp.controller('AddListingController',
+function($scope,$http) {
+  console.log('Called the AddListingController');
+  $scope.houseTypes = ["1 BedRoom Apartment","2 BedRoom Apartment","3 BedRoom Apartment"]
+  $scope.houseType = "1 BedRoom Apartment";
+  $scope.message = "";
+  $scope.submitForm = function() {
+  			// check to make sure the form is completely valid
+  	if ($scope.listingForm.$valid) {
+        $http({
+                method  : 'POST',
+                url     : 'http://localhost:8080/DynamoProject/rest/addListing',
+                data    : JSON.stringify({name: $scope.listing.name,
+                                          city: $scope.listing.city,
+                                          houseType:$scope.houseType,
+                                          location : $scope.listing.location,
+                                          descriptor: $scope.listing.descriptor,
+                                          pinCode: $scope.listing.pinCode,
+                                          price: $scope.listing.price,
+                                          address : $scope.listing.address}),  // pass in data as strings
+                headers : { 'Content-Type': 'application/json' }  // set the headers so angular passing info as form data (not request payload)
+            })
+                .success(function(data) {
+                    console.log(data);
+                    $scope.listingForm.message = "Success";
+                    $scope.listingForm.message = "Listing added successfully.";
+                });
+  	}
+  }
+}
+);
+
+
+
 
