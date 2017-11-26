@@ -6,9 +6,9 @@ var airbnbAppConfig = function($routeProvider) {
           controller: 'searchPropertyController',
           templateUrl: 'views/searchProperty.html'
         })
-    .when('/addCustomer', {
-      controller: 'AddCustomerController',
-      templateUrl: 'views/addCustomer.html'
+    .when('/addListing', {
+      controller: 'AddListingController',
+      templateUrl: 'views/addListing.html'
     })
     .when('/customerDetails', {
             controller: 'AllCustomerDetailsController',

@@ -60,10 +60,10 @@ nav a:last-child{
 
 nav.customerDetails .customerDetails,
 nav.searchProperty .searchProperty,
+nav.addListing .addListing,
 nav.addCustomer .addCustomer{
 	background-color:#e35885;
 }
-
 p{
 	font-size:22px;
 	font-weight:bold;
@@ -107,7 +107,7 @@ background: -moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
 margin:auto;
 position:relative;
 width:550px;
-height:250px;
+height:340px;
 font-family: Tahoma, Geneva, sans-serif;
 font-size: 14px;
 font-style: italic;
@@ -133,6 +133,7 @@ label{
 	color: #e35885;
 	padding:3px;
     margin: 5px;
+    width: 100px;
 }
 
 input {
@@ -141,6 +142,19 @@ display:inline-block;
 border: 1px solid #999;
 border-radius: 10px;
 height: 25px;
+-webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+-moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+padding:1px;
+margin: 5px;
+}
+
+select {
+width:375px;
+display:inline-block;
+border: 1px solid #999;
+border-radius: 10px;
+height: 30px;
 -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
