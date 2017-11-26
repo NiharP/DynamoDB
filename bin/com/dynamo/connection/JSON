@@ -1,0 +1,45 @@
+{
+  "City": {
+    "S": "\n  Brooklyn"
+  },
+  "Host_ID": {
+    "N": "3493067"
+  },
+  "ID": {
+    "N": "685006"
+  },
+  "Location": {
+    "S": "Lefferts Garden"
+  },
+  "Property_Info": {
+    "M": {
+      "Address": {
+        "S": "Ocean Avenue,\n  Brooklyn, NY 11225, United States"
+      },
+      "Price": {
+        "N": "75"
+      },
+      "Property_type": {
+        "S": "Apartment"
+      }
+    }
+  },
+  "Reviews": {
+    "M": {
+      "Review_id": {
+        "SS": [
+          "107819513",
+          "10/12/2016",
+          "Jorge was amazing, so kind! we literally loved him, helped us out with everything,
+          gave us advise on where to eat and where to go, the Apartment's location is great,
+          in little Italy, many beautiful restaurants around, soho 3 blocks away, the pictures
+          are accurate, the place is very nice, really close to everything, the bed was super comfy
+          and we really enjoyed our stay, would definitely come back. Thank you Jorge! "
+        ]
+      }
+    }
+  },
+  "ZipCode": {
+    "N": "11225"
+  }
+}

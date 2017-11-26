@@ -11,3 +11,10 @@ Steps to install.
 7. Add AWS credentials as Environment variables. 
     AWS_ACCESS_KEY_ID = A****************Q
     AWS_SECRET_ACCESS_KEY = v*****************************l
+    OR
+    To run dyamoDB locally.
+    Follow the instructions
+    http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
+        1. Download the zip. Extract in some folder, lets say 'temp'
+        2. Run command from the folder temp/dynamoDb_latest.
+        java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb

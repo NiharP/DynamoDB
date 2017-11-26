@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry path="bin" kind="output"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.25.1/334916026e1c327d22abce2e5ee1a9b446f8206f/jersey-container-servlet-2.25.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet/2.25.1/cf5f7a76fcea38158b890ab7a0142d4db709a882/jersey-container-servlet-2.25.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk/1.11.106/e988c9c25873b7b8fdcb61dcbedf32c45685e922/aws-java-sdk-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/DynamoDBLocal/1.11.0/a24b9b1fea3e14bea4ca79ba5068aa1306a447d9/DynamoDBLocal-1.11.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/ab3976d4574c48d22dc1abf6a9e8bd0fdf928223/javax.servlet-api-3.1.0-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.websocket/javax.websocket-api/1.0/107b0fdc7ca320b54dc1393e01585be5883ff348/javax.websocket-api-1.0-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.websocket/javax.websocket-api/1.0/fc843b649d4a1dcb0497669d262befa3918c7ba8/javax.websocket-api-1.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.25.1/d99241eb017d4943a55b01def4a58d620782e49a/jersey-container-servlet-core-2.25.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.containers/jersey-container-servlet-core/2.25.1/400e30bb035a0cdf3c554530224141ce659a0d1e/jersey-container-servlet-core-2.25.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.25.1/f0c3629e116829bb892a86d1fabfbc3e18550b7c/jersey-server-2.25.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-server/2.25.1/276e2ee0fd1cdabf99357fce560c5baab675b1a2/jersey-server-2.25.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.25.1/753404f68c295f40f25cdda40b05be518ede99b3/jersey-client-2.25.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-client/2.25.1/4d563b1f93352ee9fad597e9e1daf2c6159993c6/jersey-client-2.25.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.media/jersey-media-jaxb/2.25.1/4472b847fb1929f9756bf1e3711917e215005adb/jersey-media-jaxb-2.25.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.media/jersey-media-jaxb/2.25.1/d7da0beeed5614a3bfd882662faec602699e24b/jersey-media-jaxb-2.25.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.25.1/909e99b31725e867874bd156c61d6a3c19e5ce4f/jersey-common-2.25.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.core/jersey-common/2.25.1/2438ce68d4907046095ab54aa83a6092951b4bbb/jersey-common-2.25.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0.1/a20db7429fd8dfff74335ec867472b71c345049b/javax.ws.rs-api-2.0.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0.1/104e9c2b5583cfcfeac0402316221648d6d8ea6b/javax.ws.rs-api-2.0.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-pinpoint/1.11.106/973f7ef9652db28e6f0fd1bb6cd301cab611029f/aws-java-sdk-pinpoint-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-pinpoint/1.11.106/3c922fab8eb4e04ec8a08b3c2ce12ec112879d5c/aws-java-sdk-pinpoint-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-xray/1.11.106/fb3a25ce2deca1ee1a8b05278efab9ca04759ec1/aws-java-sdk-xray-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-xray/1.11.106/d1d0b8c8c57e94c3a84132ea1c994568385eef75/aws-java-sdk-xray-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-opsworkscm/1.11.106/58d57e26d4bcf3d0b0cffb9b8c41089434dc2511/aws-java-sdk-opsworkscm-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-opsworkscm/1.11.106/271422b0ffca634c6fee0d4bad2328e7e21600d5/aws-java-sdk-opsworkscm-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-support/1.11.106/deeade68c40a68c0a7ab36a3b9a0a23076daf487/aws-java-sdk-support-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-support/1.11.106/56cb3f8f329fa83b53b7c921c5b3d2aa35dff1cb/aws-java-sdk-support-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-simpledb/1.11.106/cc4f872ff8b9ef548f2cb039b17ae47834cd5852/aws-java-sdk-simpledb-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-simpledb/1.11.106/988b2d59860fce50d7e095fa405b19f919caedf4/aws-java-sdk-simpledb-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-servicecatalog/1.11.106/e0bdf71c99be75eb6266f5371e82763bb659f2a9/aws-java-sdk-servicecatalog-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-servicecatalog/1.11.106/90372d39712a89b36907c9816e7e2a133dfa29c5/aws-java-sdk-servicecatalog-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-servermigration/1.11.106/b28494b33b4e1a4c419b294a444704cadaa3ed49/aws-java-sdk-servermigration-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-servermigration/1.11.106/23fce332178edb87f8cb1bdf4cb9834fc7bbdd45/aws-java-sdk-servermigration-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-swf-libraries/1.11.22/bdc71c85859739d8a5938279322bc8317e79ed99/aws-java-sdk-swf-libraries-1.11.22-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-swf-libraries/1.11.22/4bb64607f756c0c1f427bdb491db05b48402694/aws-java-sdk-swf-libraries-1.11.22.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-simpleworkflow/1.11.106/41fe45a439a65e58439f6bb5b278a5a9d0f4285e/aws-java-sdk-simpleworkflow-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-simpleworkflow/1.11.106/2992e1392980285f336121a474f9ac52b1e0e681/aws-java-sdk-simpleworkflow-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-storagegateway/1.11.106/eb8c3c1af2d4acb05e71d4063e84224aa701dab0/aws-java-sdk-storagegateway-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-storagegateway/1.11.106/1b73b26589d6450b4cbc9d024e9fb1fbe3444f3a/aws-java-sdk-storagegateway-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-route53/1.11.106/b142b06af896a48e21298cf3ae05621178bcb6cf/aws-java-sdk-route53-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-route53/1.11.106/1370d117271133cf8ad0c3440a8ef257e66a9449/aws-java-sdk-route53-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-glacier/1.11.106/d9c9c2e5dceea2c1e50b9c3d2373c2ebfd9a0095/aws-java-sdk-glacier-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-glacier/1.11.106/740a2c23330b63c398a5d6a5689b2e765628b293/aws-java-sdk-glacier-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudwatchmetrics/1.11.106/5bbc06ce20235635e2f1cd8fdf147f2bc37a3148/aws-java-sdk-cloudwatchmetrics-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudwatchmetrics/1.11.106/4553754ee039028d7e2e529097fba081a4b9734f/aws-java-sdk-cloudwatchmetrics-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-dynamodb/1.11.106/e2228d3050f22823824f0ed9ef8e51d2f96e3f55/aws-java-sdk-dynamodb-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-dynamodb/1.11.106/dda39bed2c4750ef9ec36de03307b6c661cbfddd/aws-java-sdk-dynamodb-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-s3/1.11.106/6d7f4a3cec1a924d73ee0b5c1f001b0fb39857a4/aws-java-sdk-s3-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-s3/1.11.106/27792c91d87a828cbc788ce098cdb4c2e5127ccc/aws-java-sdk-s3-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-importexport/1.11.106/7f2fdb28340bbefae351ffea84f05aa214a8cbb9/aws-java-sdk-importexport-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-importexport/1.11.106/d722e7db3ca2049b524b528a62f9fbab9c576118/aws-java-sdk-importexport-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-sts/1.11.106/241a48bf8d591e16101604969afaccdd5fcdd02a/aws-java-sdk-sts-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-sts/1.11.106/b4bdf36f7d4d544ea455ef43b03d1976294e3a82/aws-java-sdk-sts-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-sns/1.11.106/5dc5e86aeae17689e6614fa3308115591c7f9996/aws-java-sdk-sns-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-sns/1.11.106/245956edce2a44c50b28988037ab708a79408c30/aws-java-sdk-sns-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-sqs/1.11.106/ec5a8630af6b85391b0cfa06d619d14f4f62a475/aws-java-sdk-sqs-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-sqs/1.11.106/41ee1bee714d325a1fae67366075311cfc8be29f/aws-java-sdk-sqs-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-rds/1.11.106/9740eb69ef75224a33548fab874d9fa6f9b28e95/aws-java-sdk-rds-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-rds/1.11.106/7407f1cc5cd54038cc3ef48cc5024244125934c3/aws-java-sdk-rds-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-redshift/1.11.106/2376769aeb9f5f2554ed6587c46e612d45044c3e/aws-java-sdk-redshift-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-redshift/1.11.106/a3da024c521038c4391cdddfe6df65354a036119/aws-java-sdk-redshift-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticbeanstalk/1.11.106/f52ec005ee80de9d6a4990d1adc18d17caa9ed1f/aws-java-sdk-elasticbeanstalk-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticbeanstalk/1.11.106/857efa75ab05fa19d406003eab1e303ecd38ce0a/aws-java-sdk-elasticbeanstalk-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-iam/1.11.106/82124bc283829f1ece64166e8f6476af847c62f0/aws-java-sdk-iam-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-iam/1.11.106/cfeff83402898204eb49da5484dc4dfea7aa5039/aws-java-sdk-iam-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-datapipeline/1.11.106/e373176f1fa337480028fd6ced6da551dbd1bfba/aws-java-sdk-datapipeline-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-datapipeline/1.11.106/9c4c8766bf6a78b5ed85548a9cf40d882dc0dd25/aws-java-sdk-datapipeline-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticloadbalancing/1.11.106/17fbeb3f3de2404214c962e81b18539e222bc2a/aws-java-sdk-elasticloadbalancing-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticloadbalancing/1.11.106/484f231046a49297be4433c224fe6e1e34cc77c2/aws-java-sdk-elasticloadbalancing-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticloadbalancingv2/1.11.106/d597b59ebbee90344bf048d7e88b02680a884780/aws-java-sdk-elasticloadbalancingv2-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticloadbalancingv2/1.11.106/5b8881efe0a971fed45c862ad0b4fac64e99ca8e/aws-java-sdk-elasticloadbalancingv2-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-emr/1.11.106/156c7bcdb781de4f0cb5c65bf185cf375693ef31/aws-java-sdk-emr-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-emr/1.11.106/5d7675fdcc343bf81806c3d4a23db95c4074eb7a/aws-java-sdk-emr-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticache/1.11.106/6e358419e883432d8832f086e335d709c51a33b8/aws-java-sdk-elasticache-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticache/1.11.106/e252a05c953f970c122856ec6119d31b266502fe/aws-java-sdk-elasticache-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elastictranscoder/1.11.106/66274de9841ae09d3996d529fbb3e62bd894c1f8/aws-java-sdk-elastictranscoder-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elastictranscoder/1.11.106/8172fdd5e8d8d52abd54537c392dc6c671a9500c/aws-java-sdk-elastictranscoder-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ec2/1.11.106/37ec35b8cfff9b2fe4a75afd1e289ecbcb360b2/aws-java-sdk-ec2-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ec2/1.11.106/8cc5596c8a368687684fd4ba17d57a6997ff73c8/aws-java-sdk-ec2-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-budgets/1.11.106/cb65a5f005d2aeb6a39a6e81c1ba7827c3d1e966/aws-java-sdk-budgets-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-budgets/1.11.106/975f8c8ee6a6bb03d3888b034745d5a7ed57b99/aws-java-sdk-budgets-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudtrail/1.11.106/88c7f8a00eca8c2344609bcbb3ed97f24c52a1c8/aws-java-sdk-cloudtrail-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudtrail/1.11.106/8c741559468cda3431795ccacbbfe9b0e7059915/aws-java-sdk-cloudtrail-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudwatch/1.11.106/bf9488af998987dd884a36ae76d8cee12707eda7/aws-java-sdk-cloudwatch-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudwatch/1.11.106/a44c71473da3636a8cbcfc4456f7a99002584381/aws-java-sdk-cloudwatch-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-logs/1.11.106/10c6e1841955dbff416bff54bc3204ce60f2c622/aws-java-sdk-logs-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-logs/1.11.106/65d96587b8e9e541cd7d095a18ebb5b6de68c96d/aws-java-sdk-logs-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-events/1.11.106/11948993c61d8a2f9d04d6ca12b3f71833572f2/aws-java-sdk-events-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-events/1.11.106/c5ef563d7418d35b6e76ac9206f9da185b2f2a29/aws-java-sdk-events-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cognitoidentity/1.11.106/648b15e6dee5d5eea619f551f01e8c47a16e28ce/aws-java-sdk-cognitoidentity-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cognitoidentity/1.11.106/5cae8035a48670dde3600bebe5c4bb969adf6fb6/aws-java-sdk-cognitoidentity-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cognitosync/1.11.106/d6277af934ed24fbb9a5c63ce323b2c4ffdc589c/aws-java-sdk-cognitosync-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cognitosync/1.11.106/3b5750e26bcff4bb491adf146e8ab63316cf3cab/aws-java-sdk-cognitosync-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-directconnect/1.11.106/754801b1f02a98c42af68e943abd71299f39abee/aws-java-sdk-directconnect-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-directconnect/1.11.106/e5c3fe052478a4e23473e415e15826eb02f914d8/aws-java-sdk-directconnect-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudformation/1.11.106/bce17047fa598fb6ca1627b322800a107acb124a/aws-java-sdk-cloudformation-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudformation/1.11.106/6a3de403e205688a8912d5dd6725bc6a9e2b1b79/aws-java-sdk-cloudformation-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudfront/1.11.106/ee56084a24cd43a1de520bb8bfca8bca08ef39a/aws-java-sdk-cloudfront-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudfront/1.11.106/f1222a09a8f7a0c9e119ef2d20e121c40f33f34a/aws-java-sdk-cloudfront-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-clouddirectory/1.11.106/3de480c3a26ed582b4841df228aab8e9b9bc224f/aws-java-sdk-clouddirectory-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-clouddirectory/1.11.106/a18a585bcaf00fa5cbaeda6da891bdc7418e6f59/aws-java-sdk-clouddirectory-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kinesis/1.11.106/9b3b183ac9fd56efa7127ee1716d8c84cc732db8/aws-java-sdk-kinesis-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kinesis/1.11.106/5538db484cc058c354223e44a577bbf160dc1f8a/aws-java-sdk-kinesis-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-opsworks/1.11.106/ffb5c43bb1c2dbd05d97700ed649f4d9a4486bd0/aws-java-sdk-opsworks-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-opsworks/1.11.106/89d36fd84194f0a003cdc9a2c6c5a98d607a9f6c/aws-java-sdk-opsworks-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ses/1.11.106/a63797bd2e9d293c3dd509c4e27b7d349fce620b/aws-java-sdk-ses-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ses/1.11.106/cf77519c639785471dc4756d25f9164e2e85ac3b/aws-java-sdk-ses-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-autoscaling/1.11.106/47aec71156810fd248d6e8607b5b913a8de50be/aws-java-sdk-autoscaling-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-autoscaling/1.11.106/9d7acb2a05934b6c39d275c200e1f7b947d2456d/aws-java-sdk-autoscaling-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudsearch/1.11.106/bef9ddacb2864de4b5f98f06d84c0f20284c1ce1/aws-java-sdk-cloudsearch-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudsearch/1.11.106/97a33888e7a957f9d8a716534da40c46d64278d3/aws-java-sdk-cloudsearch-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codedeploy/1.11.106/cfb628cacf6a9a243ae98fe8ef621dd21a6fb17/aws-java-sdk-codedeploy-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codedeploy/1.11.106/aa374201840bee1bb0bdf67b09a894f20ecd0480/aws-java-sdk-codedeploy-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codepipeline/1.11.106/e8ccefa0804e0277e79ff33deafd840ab28842a7/aws-java-sdk-codepipeline-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codepipeline/1.11.106/f71d863975af18d382cefbe6313d2e36e73ab147/aws-java-sdk-codepipeline-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kms/1.11.106/45228c4b28d960749a9367e31f46ed2cf094dceb/aws-java-sdk-kms-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kms/1.11.106/761746249b6b049fdc0f8eb3fce2a95231a4bc21/aws-java-sdk-kms-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-config/1.11.106/ec9c80d991556f34112a03a1497023c09aee538/aws-java-sdk-config-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-config/1.11.106/17013e82fcbed4e2e536fec7ecfe8440b7dc0eec/aws-java-sdk-config-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lambda/1.11.106/2e257ea72b1e9d02b2fa150e5ce76314349258c4/aws-java-sdk-lambda-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lambda/1.11.106/8ec2ecc9b8c954bf1abb098c0ca3ed01e0b36830/aws-java-sdk-lambda-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ecs/1.11.106/da88cdeacf19161ee5bfae718fee5d14c90d7ebf/aws-java-sdk-ecs-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ecs/1.11.106/802516928f620a2b52e129d2fae360651081de36/aws-java-sdk-ecs-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ecr/1.11.106/7f01b123b3aa53934dabe5b2df3ff02ac500866d/aws-java-sdk-ecr-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ecr/1.11.106/aed4f3884eb6aef55b451f9ea089152f232cd89e/aws-java-sdk-ecr-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudhsm/1.11.106/22ab6d83fcae48981371fec354eb87c6a435aa3/aws-java-sdk-cloudhsm-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cloudhsm/1.11.106/8ce2ef76111638f6002f2bdb3abf2fbaaca4d6b8/aws-java-sdk-cloudhsm-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ssm/1.11.106/343deb1c7e65b3c7fdf54e61ae787037cc907bd6/aws-java-sdk-ssm-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ssm/1.11.106/56451b1a1346cf8a9f244c13054ee331d7fb9dce/aws-java-sdk-ssm-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-workspaces/1.11.106/9378d0f09fb51385c2a2d8f73bc7c64ec66e5af5/aws-java-sdk-workspaces-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-workspaces/1.11.106/cf893f73717ef18a6f80120249345b7a0510e114/aws-java-sdk-workspaces-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-machinelearning/1.11.106/a43e2dc4b1e3ccdf86aa1939b34e58e415cfbf95/aws-java-sdk-machinelearning-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-machinelearning/1.11.106/2e5e47461f7a514e8ffdaab220a98fcfa5b991c1/aws-java-sdk-machinelearning-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-directory/1.11.106/4fec58ef6dccc0297cffe606cb1d7742143e9809/aws-java-sdk-directory-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-directory/1.11.106/aed1e88b9fa0d412cefec3ff6f6611a427f0f228/aws-java-sdk-directory-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-efs/1.11.106/a5229c39ae0dac7de314f6de15eb02e30aa76926/aws-java-sdk-efs-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-efs/1.11.106/f82231c387f21b32d6feaf05d9aa66d09e86881f/aws-java-sdk-efs-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codecommit/1.11.106/e23aca59a26046e487c66460f6b9de34ce24413f/aws-java-sdk-codecommit-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codecommit/1.11.106/e129e00e1507fbb71c6d390e43ab930a955b3645/aws-java-sdk-codecommit-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-devicefarm/1.11.106/5ab21fb0aa3812ecd98bb9e89040b2b7330c4eba/aws-java-sdk-devicefarm-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-devicefarm/1.11.106/6cdd62c9d69cfac43f544b5156f849c9ae808478/aws-java-sdk-devicefarm-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticsearch/1.11.106/b7ebfe0851eece7b71069efda7c09e857e0e3e4d/aws-java-sdk-elasticsearch-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticsearch/1.11.106/b85322898d18134f3fe2f950c310a30fc10ef63b/aws-java-sdk-elasticsearch-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-waf/1.11.106/5db61afa79157f0ab84977ec3585caa111c3590c/aws-java-sdk-waf-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-waf/1.11.106/189869b449d640440a3e2423fa6adbcfbd119fe/aws-java-sdk-waf-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-marketplacecommerceanalytics/1.11.106/1a97eece5bbeb277a1449daf799a920e5468cb56/aws-java-sdk-marketplacecommerceanalytics-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-marketplacecommerceanalytics/1.11.106/ad2c08812b0bcbdbe02caa7047ec6b41eddb6b1/aws-java-sdk-marketplacecommerceanalytics-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-inspector/1.11.106/65f619be5685b4e29a9cac6116dffd49dff17f6e/aws-java-sdk-inspector-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-inspector/1.11.106/379fcead404f418f2fa8096a69ad1a418430502b/aws-java-sdk-inspector-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-iot/1.11.106/afd8e38834a5ac5b55a3b8f9f7fcda6bc3b83f7a/aws-java-sdk-iot-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-iot/1.11.106/786432538d242b991a8ba7b06221f268bf6fe298/aws-java-sdk-iot-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-api-gateway/1.11.106/cb08b0183b295e256fa0ee9246b95bba7466af74/aws-java-sdk-api-gateway-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-api-gateway/1.11.106/29545c0db48c98736233d107016a523ae05fe8bc/aws-java-sdk-api-gateway-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-acm/1.11.106/f76f7daba75789861e5bb4188386c0e82bbf2c1/aws-java-sdk-acm-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-acm/1.11.106/4e2eeca7bade6d34aaf3823a026ed82c739fdeac/aws-java-sdk-acm-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-gamelift/1.11.106/790586c5717c6927df266ce507b3b46a9390131c/aws-java-sdk-gamelift-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-gamelift/1.11.106/3418be8a1ba50c95cb574e2dee0e73c594368f14/aws-java-sdk-gamelift-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-dms/1.11.106/29230616b201a333585f525a6d7563d1c46b1cce/aws-java-sdk-dms-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-dms/1.11.106/2d4df5d53f4641bd2755b96e91f3e99344d97490/aws-java-sdk-dms-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-marketplacemeteringservice/1.11.106/783c615260b81edf962be2d107c344631652647c/aws-java-sdk-marketplacemeteringservice-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-marketplacemeteringservice/1.11.106/56471b84c42f7ff2185e0435b88f62ea6e19a0af/aws-java-sdk-marketplacemeteringservice-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cognitoidp/1.11.106/a4791e025ef6f87fcfcdf54773ad418fb2b593bc/aws-java-sdk-cognitoidp-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-cognitoidp/1.11.106/5c9e4b8f5716023c19c549ad0e9c37cc810b3770/aws-java-sdk-cognitoidp-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-discovery/1.11.106/fe9d970d6f59476958f60ce93fc6086b2aa3718b/aws-java-sdk-discovery-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-discovery/1.11.106/c25ced7bd7914483dc636168b5f6675a00ab085f/aws-java-sdk-discovery-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-applicationautoscaling/1.11.106/edd18794ecb94b84a00cf6e73b5682857c5fa72f/aws-java-sdk-applicationautoscaling-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-applicationautoscaling/1.11.106/2bcdb8b33e72ac25cfab3bd32cac8aed9f57de06/aws-java-sdk-applicationautoscaling-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-snowball/1.11.106/e4f610873caedc8258dbfa718e0f8e2d349c679c/aws-java-sdk-snowball-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-snowball/1.11.106/89ba647b34cb55628549f5352bec5337f395339f/aws-java-sdk-snowball-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-rekognition/1.11.106/18016508e2c59a42d0ee16d2794095360389e893/aws-java-sdk-rekognition-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-rekognition/1.11.106/2d00373e405c707a3d0a17edff50e0ce0b90bc49/aws-java-sdk-rekognition-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-polly/1.11.106/a63f5eb7829c55768178c047996d5021d5066931/aws-java-sdk-polly-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-polly/1.11.106/3c04988dc4c38f1d3d7de7a54c4b5cfbe7fdf2f7/aws-java-sdk-polly-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lightsail/1.11.106/487526f53a75098ac5eb78346509d7c4450cd257/aws-java-sdk-lightsail-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lightsail/1.11.106/f65edef470484279e97a9712e95d35330bc810ce/aws-java-sdk-lightsail-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-stepfunctions/1.11.106/f0d13b8b53ac80f5532706e963948b6ab599c611/aws-java-sdk-stepfunctions-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-stepfunctions/1.11.106/748f572f74c4f1949b1659cde73ef58964201c47/aws-java-sdk-stepfunctions-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-health/1.11.106/c983eba71154dd67c2c99a0107fa6777e1222f87/aws-java-sdk-health-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-health/1.11.106/c5700db30a70de1d27a4aa15ece5cd6d6ad6b26a/aws-java-sdk-health-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-costandusagereport/1.11.106/7cb759022f097471beec8f161cbe812e2852a645/aws-java-sdk-costandusagereport-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-costandusagereport/1.11.106/d0f057ba3695867b24269850ed2b7e1be2457943/aws-java-sdk-costandusagereport-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codebuild/1.11.106/f0a55920d5b668751e02b0b0a91be602ae975a12/aws-java-sdk-codebuild-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codebuild/1.11.106/fae4a621f76dbfd974d32b91d9eddd9a6114b7af/aws-java-sdk-codebuild-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-appstream/1.11.106/84fe18ddf7657828afba47a9442a4bad57f96a4f/aws-java-sdk-appstream-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-appstream/1.11.106/bb0ac60c08c74f59b213777fe34739adfe39da6f/aws-java-sdk-appstream-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-shield/1.11.106/b973bea1566e34fdb74ba98dd574f8e4f5f5df1b/aws-java-sdk-shield-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-shield/1.11.106/9ac734c8a99f00329636b7950517766775216999/aws-java-sdk-shield-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-batch/1.11.106/27c3d1d513a13083710dd1cbe12662bc4761e02b/aws-java-sdk-batch-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-batch/1.11.106/213228eb714aaffece15c4709200f67bcf97dd00/aws-java-sdk-batch-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lex/1.11.106/27f126255cd7bdf9a22ec658f83a46e164e0ec08/aws-java-sdk-lex-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lex/1.11.106/abf395e2749d2946bbb12707168cae8c112a4d92/aws-java-sdk-lex-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-mechanicalturkrequester/1.11.106/8aabb85df9b8581dcc27374e9aa5ed58dc7b0e0/aws-java-sdk-mechanicalturkrequester-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-mechanicalturkrequester/1.11.106/af69bc450ccdb1fdd9c9d1dce8f6615899badf28/aws-java-sdk-mechanicalturkrequester-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-organizations/1.11.106/2c79a5885ddc166db0e85bc8326548fb979c9ea6/aws-java-sdk-organizations-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-organizations/1.11.106/caa744351dd02350f1dac9450c7e1e869297a553/aws-java-sdk-organizations-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-workdocs/1.11.106/c30d291ad76b0a16154cf4437dd91f63b021d82a/aws-java-sdk-workdocs-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-workdocs/1.11.106/a9688e76c47195e88dab85885756f2aeb84f0004/aws-java-sdk-workdocs-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-core/1.11.106/4ce3a6569961c605eda16f0ad0d0a25fca2eb87a/aws-java-sdk-core-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-core/1.11.106/fe41bd1605a6196ea7f4a654cf9a74e4aa21a227/aws-java-sdk-core-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-models/1.11.106/6de179f026b59e2ec56ce2de286367b8263b8588/aws-java-sdk-models-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-models/1.11.106/f0871a69eeac818d8acf857aa0316581152f7bf7/aws-java-sdk-models-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.1/ffd5a61e58d0d93e759568ff2f058d4594026bc6/antlr4-runtime-4.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.1/3f42a2396857e4b7d088a63ec265fd7817b14d7a/antlr4-runtime-4.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/6c5459816530a1962ac18cd315cc775b1b384329/commons-cli-1.2-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/commons-cli/commons-cli/1.2/2bf96b7aa8b611c177d329452af1dc933e14501c/commons-cli-1.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/d2a489573c0ed2c4942b3660decad5d65087b406/commons-lang3-3.3.2-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.almworks.sqlite4java/libsqlite4java-linux-i386/1.0.392/b193c62571061e68bddeaf8ee7d3a8569b945ea6/libsqlite4java-linux-i386-1.0.392.so">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.almworks.sqlite4java/libsqlite4java-linux-amd64/1.0.392/5a97aa1b643252eb9be0901037cb440c2e145956/libsqlite4java-linux-amd64-1.0.392.so">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.almworks.sqlite4java/sqlite4java-win32-x64/1.0.392/d20dc00abecc7e0bde38c68eee68f2e70c26df95/sqlite4java-win32-x64-1.0.392.dll">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.almworks.sqlite4java/sqlite4java-win32-x86/1.0.392/df89be9a5875efc200299acc6f2b94d200271037/sqlite4java-win32-x86-1.0.392.dll">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.almworks.sqlite4java/libsqlite4java-osx/1.0.392/de9528513a20ceae197ce9e14690973d617233bb/libsqlite4java-osx-1.0.392.dylib">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.1/6e6c4141f6d96e57fd48df5d398a122226ef92d7/log4j-core-2.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.1/31823dcde108f2ea4a5801d1acc77869d7696533/log4j-core-2.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.1/171e4563feb5bf66ef790a8e679557a03b378f8e/log4j-api-2.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.1/588c32c91544d80cc706447aa2b8037230114931/log4j-api-2.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-client/8.1.12.v20130726/e35f791e15e7bff009e6003fa468ba56f9aab4a0/jetty-client-8.1.12.v20130726-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-client/8.1.12.v20130726/9ff9b1c4c27d76888d01447d9341fb95869271c1/jetty-client-8.1.12.v20130726.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/8.1.12.v20130726/c44ada0510dae0cf9e41ab744093520c4173fd6a/jetty-server-8.1.12.v20130726-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-server/8.1.12.v20130726/e8d89c85edd00680a7b30bf219e6dba181dc4aa1/jetty-server-8.1.12.v20130726.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/8269667b73d9616600359a9b0ba1b1c7d0cf7a97/mockito-core-1.10.19-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/1.10.19/e8546f5bef4e061d8dd73895b4e8f40e3fe6effe/mockito-core-1.10.19.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.5.0-b32/9ad9ce916e9cae42f3dd457d863d7faf3a5b0a2e/hk2-locator-2.5.0-b32-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-locator/2.5.0-b32/195474f8ad0a8d130e9ea949a771bcf1215fc33b/hk2-locator-2.5.0-b32.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/javax.inject/2.5.0-b32/55e665280bbf8ed63c301959e130cfe335637f31/javax.inject-2.5.0-b32-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/javax.inject/2.5.0-b32/b2fa50c8186a38728c35fe6a9da57ce4cc806923/javax.inject-2.5.0-b32.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.2/ad18a02db08eaee697f812e333f692fc51129e4a/javax.annotation-api-1.2-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.annotation/javax.annotation-api/1.2/479c1e06db31c432330183f5cae684163f186146/javax.annotation-api-1.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-guava/2.25.1/eeb130898a7b7b146ce9a85f9434b4100105f29d/jersey-guava-2.25.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-guava/2.25.1/a2bb4f8208e134cf2cf71dfb8824e42942f7bd06/jersey-guava-2.25.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.5.0-b32/fa4f62a464d7d65b2a3d33035bb5606792273556/hk2-api-2.5.0-b32-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-api/2.5.0-b32/6a576c9653832ce610b80a2f389374ef19d96171/hk2-api-2.5.0-b32.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.1/b5685f8eaa7d83351b185a82a92abcd1b8b87fc8/osgi-resource-locator-1.0.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/osgi-resource-locator/1.0.1/4ed2b2d4738aed5786cfa64cba5a332779c4c708/osgi-resource-locator-1.0.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/7d49b53caed9bd81d172807c3e096d24f3c57090/validation-api-1.1.0.Final-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/jmespath-java/1.11.106/d6079975e8c8c59682d510e59e2db0f5ba76917f/jmespath-java-1.11.106-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.amazonaws/jmespath-java/1.11.106/67c1b3c5da64d1890ad755b8d50d02b76291d97/jmespath-java-1.11.106.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.2.0/546dfa7cadacf40752c42bfd12af3b7a935920af/json-path-2.2.0-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.jayway.jsonpath/json-path/2.2.0/22290d17944bd239fabf5ac69005a60a7ecbbbcb/json-path-2.2.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.2/b9f9e3e5255b6ddc3bf21be05428c7a60d00e042/httpclient-4.5.2-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.2/733db77aa8d9b2d68015189df76ab06304406e50/httpclient-4.5.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/software.amazon.ion/ion-java/1.0.2/3077203a7e79dd126a480da0491ec60238bbb872/ion-java-1.0.2-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/software.amazon.ion/ion-java/1.0.2/ee9dacea7726e495f8352b81c12c23834ffbc564/ion-java-1.0.2.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.6.6/ca843a8233bdac6e7bb0aeb57473c622b9fdee8b/jackson-databind-2.6.6-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.6.6/5108dde6049374ba980b360e1ecff49847baba4a/jackson-databind-2.6.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.6.6/c9553dec78895e09e133bcd340fe5b1300f1e72b/jackson-dataformat-cbor-2.6.6-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.6.6/34c7b7ff495fc6b049612bdc9db0900a68e112f8/jackson-dataformat-cbor-2.6.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.1/bf0996237b66ce00cd3132af179612df02ff9771/joda-time-2.8.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.8.1/f5bfc718c95a7b1d3c371bb02a188a4df18361a9/joda-time-2.8.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.abego.treelayout/org.abego.treelayout.core/1.0.1/6e1dd6f6efdb453c7b8ba35726c63fbf50cd7142/org.abego.treelayout.core-1.0.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.abego.treelayout/org.abego.treelayout.core/1.0.1/e31e79cba7a5414cf18fa69f3f0a2cf9ee997b61/org.abego.treelayout.core-1.0.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.almworks.sqlite4java/sqlite4java/1.0.392/2efe18f7bea6fa9536802dd4ea54d948117216c6/sqlite4java-1.0.392-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.almworks.sqlite4java/sqlite4java/1.0.392/d6234e08ff4e1607ff5321da2579571f05ff778d/sqlite4java-1.0.392.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/8.1.12.v20130726/6501806c29564cea6a6f6f8c725f972905bc8bb0/jetty-http-8.1.12.v20130726-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-http/8.1.12.v20130726/530b3a21d71ac69279bee129869d7eac031e3533/jetty-http-8.1.12.v20130726.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet/3.0.0.v201112011016/15c914135cf30177b83c321250c458396289cd37/javax.servlet-3.0.0.v201112011016-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty.orbit/javax.servlet/3.0.0.v201112011016/aaaa85845fb5c59da00193f06b8e5278d8bf3f8/javax.servlet-3.0.0.v201112011016.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-continuation/8.1.12.v20130726/fe73da392c26fc11778d233424834583a257e33c/jetty-continuation-8.1.12.v20130726-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-continuation/8.1.12.v20130726/56983c28a934cb2b8cdfcf3a3fa9b28320f7ac7d/jetty-continuation-8.1.12.v20130726.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.1/2ccf1154d1a8936042a8a742dc3e611d02ac7213/hamcrest-core-1.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.1/860340562250678d1a344907ac75754e259cdb14/hamcrest-core-1.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/611a57d836e2c320d59f9851d4ad587f3c8472e/objenesis-2.1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.1/87c0ea803b69252868d09308b4618f766f135a96/objenesis-2.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.5.0-b32/6b4474b77b50234f978e9fecce87c030d64193f2/hk2-utils-2.5.0-b32-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2/hk2-utils/2.5.0-b32/5108a926988c4ceda7f1e681dddfe3101454a002/hk2-utils-2.5.0-b32.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.5.0-b32/51312ba9370f3b514cc95c5c2c77a224a1d7e9b9/aopalliance-repackaged-2.5.0-b32-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.glassfish.hk2.external/aopalliance-repackaged/2.5.0-b32/6af37c3f8ec6f9e9653ec837eb508da28ce443cd/aopalliance-repackaged-2.5.0-b32.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/d8fdc08a455bc0b28bc0bed1f0d032d935cee8e1/javassist-3.20.0-GA-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.20.0-GA/a9cbcdfb7e9f86fbc74d3afae65f2248bfbf82a0/javassist-3.20.0-GA.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.16/974c5dd98f38036bd98b3a8f7bf00ee0d91adbdd/slf4j-api-1.7.16-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.16/3a6274f658487d5bfff9af3862beff6da1e7fd52/slf4j-api-1.7.16.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.4/c5c19e3e6af6b452def290cde12a3ee4c35c893c/httpcore-4.4.4-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.4/b31526a230871fbe285fbcbe2813f9c0839ae9b0/httpcore-4.4.4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/3f15fff45d57656685abfee9e8302bf14580044c/commons-codec-1.9-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.9/9ce04e34240f674bc72680f8b843b1457383161a/commons-codec-1.9.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.6.0/7bcb615d523d88acbc121c92aafeba8d37a83792/jackson-annotations-2.6.0-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.6.0/a0990e2e812ac6639b6ce955c91b13228500476e/jackson-annotations-2.6.0.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.6.6/8ee54db2ad9ea0e244c38d584150b3d524b13d80/jackson-core-2.6.6-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.6.6/2eb801df67aacaf5b1deb4ac626e1964508e47b/jackson-core-2.6.6.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/8.1.12.v20130726/f53e6c374fc35805cc90ea419137c93280288680/jetty-io-8.1.12.v20130726-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-io/8.1.12.v20130726/859ad5da478e34bca888812a81e12cd4dcdef6fd/jetty-io-8.1.12.v20130726.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/a00123f261762a7c5e0ec916a2c7c8298d29c400/javax.inject-1-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/8.1.12.v20130726/68fdb12d9ec9ce33a35f8ff899d795144237c6a9/jetty-util-8.1.12.v20130726-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.eclipse.jetty/jetty-util/8.1.12.v20130726/255cb3b9a415146252796915d8dc3c3745ff1eb6/jetty-util-8.1.12.v20130726.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar" kind="lib" path="C:/Users/Chinmay/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+		</attributes>
+	</classpathentry>
+</classpath>

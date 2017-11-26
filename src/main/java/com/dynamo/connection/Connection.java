@@ -1,57 +1,61 @@
 package com.dynamo.connection;
 
-import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
-import com.amazonaws.services.dynamodbv2.document.DynamoDB;
-import com.amazonaws.services.dynamodbv2.document.Item;
-import com.amazonaws.services.dynamodbv2.document.Table;
+import com.amazonaws.services.dynamodbv2.document.*;
+import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
+import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
+import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.amazonaws.services.dynamodbv2.model.*;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+/**
+ * Connecting to Local DynamoDB
+ */
 public class Connection {
+    private static final String JOHN_PROPERTY = "{\n" +
+            "\t\"Address\": \"220 John Street, 2230, Rochester, NY-14623\",\n" +
+            "\t\"Price\": 220,\n" +
+            "\t\"Type\": \"House\"\n" +
+            "}";
+    private static final Set<String> REVIEWS = new HashSet<>(Arrays.asList("1", "2"));
     static AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
             .withEndpointConfiguration(
-                    new AwsClientBuilder.EndpointConfiguration("dynamodb.us-west-2.amazonaws.com", "us-west-2"))
-            .withCredentials(new EnvironmentVariableCredentialsProvider())
+                    new AwsClientBuilder.EndpointConfiguration("http://localhost:8000", "us-west-2"))
+            //    .withCredentials(new EnvironmentVariableCredentialsProvider())
             .build();
 
-    static DynamoDB dynamoDB = new DynamoDB(client);
+    public static DynamoDB dynamoDB = new DynamoDB(client);
 
 
     static SimpleDateFormat dateFormatter = new SimpleDateFormat(
             "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
-    static String productCatalogTableName = "ProductCatalog";
-    static String forumTableName = "Forum";
-    static String threadTableName = "Thread";
-    static String replyTableName = "Reply";
+    public static String listings = "Listings";
+    public static String reviews = "Reviews";
 
     public static void main(String[] args) throws Exception {
 
         try {
 
-            deleteTable(productCatalogTableName);
-            deleteTable(forumTableName);
-            deleteTable(threadTableName);
-            deleteTable(replyTableName);
+            deleteTable(listings);
+            deleteTable(reviews);
 
             // Parameter1: table name // Parameter2: reads per second //
             // Parameter3: writes per second // Parameter4/5: hash key and type
             // Parameter6/7: range key and type (if applicable)
 
-            createTable(productCatalogTableName, 10L, 5L, "Id", "N");
-            createTable(forumTableName, 10L, 5L, "Name", "S");
-            createTable(threadTableName, 10L, 5L, "ForumName", "S", "Subject", "S");
-            createTable(replyTableName, 10L, 5L, "Id", "S", "ReplyDateTime", "S");
+            createTable(reviews, 10L, 5L, "Id", "N");
+            createTable(listings, 10L, 5L, "Id", "N", "PinCode", "N");
 
-            loadSampleProducts(productCatalogTableName);
-            loadSampleForums(forumTableName);
-            loadSampleThreads(threadTableName);
-            loadSampleReplies(replyTableName);
+            loadSampleReviews(reviews);
+            loadSampleListings(listings);
+
+            getListingsByCity("New York");
+
 
         } catch (Exception e) {
             System.err.println("Program failed:");
@@ -61,26 +65,22 @@ public class Connection {
 
     }
 
-    //    private static void createTable(DynamoDB dynamoDB) {
-//        String tableName = "Movies";
-//
-//        try {
-//            System.out.println("Attempting to create table; please wait...");
-//            Table table = dynamoDB.createTable(tableName,
-//                    Arrays.asList(new KeySchemaElement("year", KeyType.HASH), // Partition
-//                            // key
-//                            new KeySchemaElement("title", KeyType.RANGE)), // Sort key
-//                    Arrays.asList(new AttributeDefinition("year", ScalarAttributeType.N),
-//                            new AttributeDefinition("title", ScalarAttributeType.S)),
-//                    new ProvisionedThroughput(10L, 10L));
-//            table.waitForActive();
-//            System.out.println("Success.  Table status: " + table.getDescription().getTableStatus());
-//
-//        } catch (Exception e) {
-//            System.err.println("Unable to create table: ");
-//            System.err.println(e.getMessage());
-//        }
-//    }
+    private static void getListingsByCity(String city) {
+        Table table = dynamoDB.getTable(listings);
+        Index index = table.getIndex("CityIndex");
+
+        QuerySpec spec = new QuerySpec()
+                .withKeyConditionExpression("City = :v_city")
+                .withValueMap(new ValueMap()
+                        .withString(":v_city", city));
+
+        ItemCollection<QueryOutcome> items = index.query(spec);
+        Iterator<Item> iter = items.iterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.next().toJSONPretty());
+        }
+    }
+
     private static void deleteTable(String tableName) {
         Table table = dynamoDB.getTable(tableName);
         try {
@@ -125,43 +125,58 @@ public class Connection {
                 keySchema.add(new KeySchemaElement()
                         .withAttributeName(rangeKeyName)
                         .withKeyType(KeyType.RANGE));
+
                 attributeDefinitions.add(new AttributeDefinition()
                         .withAttributeName(rangeKeyName)
                         .withAttributeType(rangeKeyType));
             }
 
+            if (listings.equals(tableName)) {
+                attributeDefinitions.add(new AttributeDefinition()
+                        .withAttributeName("City")
+                        .withAttributeType("S"));
+                attributeDefinitions.add(new AttributeDefinition()
+                        .withAttributeName("Location")
+                        .withAttributeType("S"));
+            }
             CreateTableRequest request = new CreateTableRequest()
                     .withTableName(tableName)
                     .withKeySchema(keySchema)
+                    .withAttributeDefinitions(attributeDefinitions)
                     .withProvisionedThroughput(new ProvisionedThroughput()
                             .withReadCapacityUnits(readCapacityUnits)
                             .withWriteCapacityUnits(writeCapacityUnits));
 
-            // If this is the Reply table, define a local secondary index
-            if (replyTableName.equals(tableName)) {
+            // If table if listing then add secondary index.
+            if (listings.equals(tableName)) {
 
-                attributeDefinitions.add(new AttributeDefinition()
-                        .withAttributeName("PostedBy")
-                        .withAttributeType("S"));
+                GlobalSecondaryIndex cityIndex = new GlobalSecondaryIndex()
+                        .withIndexName("CityIndex")
+                        .withProvisionedThroughput(new ProvisionedThroughput()
+                                .withReadCapacityUnits(readCapacityUnits)
+                                .withWriteCapacityUnits(writeCapacityUnits))
+                        .withProjection(new Projection().withProjectionType(ProjectionType.ALL));
+                ArrayList<KeySchemaElement> indexKeySchema = new ArrayList<>();
 
-                ArrayList<LocalSecondaryIndex> localSecondaryIndexes = new ArrayList<LocalSecondaryIndex>();
-                localSecondaryIndexes.add(new LocalSecondaryIndex()
-                        .withIndexName("PostedBy-Index")
-                        .withKeySchema(
-                                new KeySchemaElement().withAttributeName(hashKeyName).withKeyType(KeyType.HASH),
-                                new KeySchemaElement().withAttributeName("PostedBy").withKeyType(KeyType.RANGE))
-                        .withProjection(new Projection().withProjectionType(ProjectionType.KEYS_ONLY)));
 
-                request.setLocalSecondaryIndexes(localSecondaryIndexes);
+                indexKeySchema.add(new KeySchemaElement()
+                        .withAttributeName("City")
+                        .withKeyType(KeyType.HASH));  //Partition key
+                indexKeySchema.add(new KeySchemaElement()
+                        .withAttributeName("Location")
+                        .withKeyType(KeyType.RANGE));  //Sort key
+
+                cityIndex.setKeySchema(indexKeySchema);
+                request.setGlobalSecondaryIndexes(Collections.singletonList(cityIndex));
             }
 
-            request.setAttributeDefinitions(attributeDefinitions);
 
             System.out.println("Issuing CreateTable request for " + tableName);
             Table table = dynamoDB.createTable(request);
             System.out.println("Waiting for " + tableName
                     + " to be created...this may take a while...");
             table.waitForActive();
+            System.out.println(table.getDescription());
 
         } catch (Exception e) {
             System.err.println("CreateTable request failed for " + tableName);
@@ -169,7 +184,7 @@ public class Connection {
         }
     }
 
-    private static void loadSampleProducts(String tableName) {
+    private static void loadSampleListings(String tableName) {
 
         Table table = dynamoDB.getTable(tableName);
 
@@ -179,115 +194,41 @@ public class Connection {
 
             Item item = new Item()
                     .withPrimaryKey("Id", 101)
-                    .withString("Title", "Book 101 Title")
-                    .withString("ISBN", "111-1111111111")
-                    .withStringSet("Authors", new HashSet<>(
-                            Arrays.asList("Author1")))
-                    .withNumber("Price", 2)
-                    .withString("Dimensions", "8.5 x 11.0 x 0.5")
-                    .withNumber("PageCount", 500)
-                    .withBoolean("InPublication", true)
-                    .withString("ProductCategory", "Book");
-            table.putItem(item);
-
-            item = new Item()
-                    .withPrimaryKey("Id", 102)
-                    .withString("Title", "Book 102 Title")
-                    .withString("ISBN", "222-2222222222")
-                    .withStringSet("Authors", new HashSet<String>(
-                            Arrays.asList("Author1", "Author2")))
-                    .withNumber("Price", 20)
-                    .withString("Dimensions", "8.5 x 11.0 x 0.8")
-                    .withNumber("PageCount", 600)
-                    .withBoolean("InPublication", true)
-                    .withString("ProductCategory", "Book");
+                    .withString("Name", "First Property")
+                    .withNumber("HostId", 111)
+                    .withString("Location", "John Street")
+                    .withString("City", "New York")
+                    .withJSON("PropertyInfo", JOHN_PROPERTY)
+                    .withNumber("PinCode", 14623)
+                    .withStringSet("Reviews", REVIEWS)
+                    .withBoolean("IsAvailable", true)
+                    .withString("HouseType", "OwnedHouse");
             table.putItem(item);
 
             item = new Item()
                     .withPrimaryKey("Id", 103)
-                    .withString("Title", "Book 103 Title")
-                    .withString("ISBN", "333-3333333333")
-                    .withStringSet("Authors", new HashSet<String>(
-                            Arrays.asList("Author1", "Author2")))
-                    // Intentional. Later we'll run Scan to find price error. Find
-                    // items > 1000 in price.
-                    .withNumber("Price", 2000)
-                    .withString("Dimensions", "8.5 x 11.0 x 1.5")
-                    .withNumber("PageCount", 600)
-                    .withBoolean("InPublication", false)
-                    .withString("ProductCategory", "Book");
-            table.putItem(item);
-
-            // Add bikes.
-
-            item = new Item()
-                    .withPrimaryKey("Id", 201)
-                    .withString("Title", "18-Bike-201")
-                    // Size, followed by some title.
-                    .withString("Description", "201 Description")
-                    .withString("BicycleType", "Road")
-                    .withString("Brand", "Mountain A")
-                    // Trek, Specialized.
-                    .withNumber("Price", 100)
-                    .withString("Gender", "M")
-                    // Men's
-                    .withStringSet("Color", new HashSet<String>(
-                            Arrays.asList("Red", "Black")))
-                    .withString("ProductCategory", "Bicycle");
+                    .withString("Name", "Second Property")
+                    .withNumber("HostId", 111)
+                    .withString("Location", "John Street")
+                    .withString("City", "New York")
+                    .withJSON("PropertyInfo", JOHN_PROPERTY)
+                    .withNumber("PinCode", 14623)
+                    .withStringSet("Reviews", REVIEWS)
+                    .withBoolean("IsAvailable", true)
+                    .withString("HouseType", "OwnedHouse");
             table.putItem(item);
 
             item = new Item()
-                    .withPrimaryKey("Id", 202)
-                    .withString("Title", "21-Bike-202")
-                    .withString("Description", "202 Description")
-                    .withString("BicycleType", "Road")
-                    .withString("Brand", "Brand-Company A")
-                    .withNumber("Price", 200)
-                    .withString("Gender", "M")
-                    .withStringSet("Color", new HashSet<String>(
-                            Arrays.asList("Green", "Black")))
-                    .withString("ProductCategory", "Bicycle");
-            table.putItem(item);
-
-            item = new Item()
-                    .withPrimaryKey("Id", 203)
-                    .withString("Title", "19-Bike-203")
-                    .withString("Description", "203 Description")
-                    .withString("BicycleType", "Road")
-                    .withString("Brand", "Brand-Company B")
-                    .withNumber("Price", 300)
-                    .withString("Gender", "W")
-                    // Women's
-                    .withStringSet("Color", new HashSet<String>(
-                            Arrays.asList("Red", "Green", "Black")))
-                    .withString("ProductCategory", "Bicycle");
-            table.putItem(item);
-
-            item = new Item()
-                    .withPrimaryKey("Id", 204)
-                    .withString("Title", "18-Bike-204")
-                    .withString("Description", "204 Description")
-                    .withString("BicycleType", "Mountain")
-                    .withString("Brand", "Brand-Company B")
-                    .withNumber("Price", 400)
-                    .withString("Gender", "W")
-                    .withStringSet("Color", new HashSet<String>(
-                            Arrays.asList("Red")))
-                    .withString("ProductCategory", "Bicycle");
-            table.putItem(item);
-
-            item = new Item()
-                    .withPrimaryKey("Id", 205)
-                    .withString("Title", "20-Bike-205")
-                    .withString("Description", "205 Description")
-                    .withString("BicycleType", "Hybrid")
-                    .withString("Brand", "Brand-Company C")
-                    .withNumber("Price", 500)
-                    .withString("Gender", "B")
-                    // Boy's
-                    .withStringSet("Color", new HashSet<String>(
-                            Arrays.asList("Red", "Black")))
-                    .withString("ProductCategory", "Bicycle");
+                    .withPrimaryKey("Id", 105)
+                    .withString("Name", "Third Property")
+                    .withNumber("HostId", 111)
+                    .withString("Location", "John Street")
+                    .withJSON("PropertyInfo", JOHN_PROPERTY)
+                    .withString("City", "Rochester")
+                    .withNumber("PinCode", 14623)
+                    .withStringSet("Reviews", REVIEWS)
+                    .withBoolean("IsAvailable", true)
+                    .withString("HouseType", "OwnedHouse");
             table.putItem(item);
 
         } catch (Exception e) {
@@ -297,32 +238,7 @@ public class Connection {
 
     }
 
-    private static void loadSampleForums(String tableName) {
-
-        Table table = dynamoDB.getTable(tableName);
-
-        try {
-
-            System.out.println("Adding data to " + tableName);
-
-            Item item = new Item().withPrimaryKey("Name", "Amazon DynamoDB")
-                    .withString("Category", "Amazon Web Services")
-                    .withNumber("Threads", 2).withNumber("Messages", 4)
-                    .withNumber("Views", 1000);
-            table.putItem(item);
-
-            item = new Item().withPrimaryKey("Name", "Amazon S3")
-                    .withString("Category", "Amazon Web Services")
-                    .withNumber("Threads", 0);
-            table.putItem(item);
-
-        } catch (Exception e) {
-            System.err.println("Failed to create item in " + tableName);
-            System.err.println(e.getMessage());
-        }
-    }
-
-    private static void loadSampleThreads(String tableName) {
+    private static void loadSampleReviews(String tableName) {
         try {
             long time1 = (new Date()).getTime() - (7 * 24 * 60 * 60 * 1000); // 7
             // days
@@ -350,42 +266,36 @@ public class Connection {
             System.out.println("Adding data to " + tableName);
 
             Item item = new Item()
-                    .withPrimaryKey("ForumName", "Amazon DynamoDB")
-                    .withString("Subject", "DynamoDB Thread 1")
-                    .withString("Message", "DynamoDB thread 1 message")
+                    .withPrimaryKey("Id", 1)
+                    .withString("Subject", "Review 1")
+                    .withString("Message", "Review message")
                     .withString("LastPostedBy", "User A")
                     .withString("LastPostedDateTime", dateFormatter.format(date2))
                     .withNumber("Views", 0)
                     .withNumber("Replies", 0)
-                    .withNumber("Answered", 0)
-                    .withStringSet("Tags", new HashSet<String>(
-                            Arrays.asList("index", "primarykey", "table")));
+                    .withNumber("Answered", 0);
             table.putItem(item);
 
             item = new Item()
-                    .withPrimaryKey("ForumName", "Amazon DynamoDB")
-                    .withString("Subject", "DynamoDB Thread 2")
-                    .withString("Message", "DynamoDB thread 2 message")
-                    .withString("LastPostedBy", "User A")
-                    .withString("LastPostedDateTime", dateFormatter.format(date3))
+                    .withPrimaryKey("Id", 2)
+                    .withString("Subject", "Review 2")
+                    .withString("Message", "Review message 2")
+                    .withString("LastPostedBy", "User B")
+                    .withString("LastPostedDateTime", dateFormatter.format(date2))
                     .withNumber("Views", 0)
                     .withNumber("Replies", 0)
-                    .withNumber("Answered", 0)
-                    .withStringSet("Tags", new HashSet<String>(
-                            Arrays.asList("index", "primarykey", "rangekey")));
+                    .withNumber("Answered", 0);
             table.putItem(item);
 
             item = new Item()
-                    .withPrimaryKey("ForumName", "Amazon S3")
-                    .withString("Subject", "S3 Thread 1")
-                    .withString("Message", "S3 Thread 3 message")
-                    .withString("LastPostedBy", "User A")
-                    .withString("LastPostedDateTime", dateFormatter.format(date1))
+                    .withPrimaryKey("Id", 3)
+                    .withString("Subject", "Review 3")
+                    .withString("Message", "Review message 3")
+                    .withString("LastPostedBy", "User C")
+                    .withString("LastPostedDateTime", dateFormatter.format(date2))
                     .withNumber("Views", 0)
                     .withNumber("Replies", 0)
-                    .withNumber("Answered", 0)
-                    .withStringSet("Tags", new HashSet<String>(
-                            Arrays.asList("largeobjects", "multipart upload")));
+                    .withNumber("Answered", 0);
             table.putItem(item);
 
         } catch (Exception e) {
