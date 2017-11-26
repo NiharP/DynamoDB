@@ -17,4 +17,5 @@ Steps to install.
     http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
         1. Download the zip. Extract in some folder, lets say 'temp'
         2. Run command from the folder temp/dynamoDb_latest.
-        java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+
+8. Run main method from Connection class. It creates all the required tables for the application.
