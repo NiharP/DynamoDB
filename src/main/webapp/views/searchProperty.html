@@ -1,3 +1,5 @@
+<html>
+<body>
 <div class='content'>
     <div>
         <input type="searchText" name="search" ng-model="city" placeholder=" Search..">
@@ -14,7 +16,8 @@
                     <th>House Type</th>
                 </tr>
                 <tr ng-repeat="listing in listings">
-                    <td>{{listing.Name}}</td>
+
+                    <td><a href="#/viewListing/{{listing.Id}}">{{listing.Name}}</a></td>
                     <td>{{listing.Location}}</td>
                     <td>{{listing.HouseType}}</td>
                 </tr>
@@ -23,3 +26,5 @@
     </div>
 
 </div>
+</body>
+</html>

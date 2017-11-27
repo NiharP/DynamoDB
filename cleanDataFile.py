@@ -1,8 +1,8 @@
 import pandas as pd
 
-df = pd.read_csv("E:/1RIT/CV/project/dataset/listings.csv")
-bad_features = ['scrape_id', 'last_scraped', 'name','summary', 'space',
-     'description', 'experiences_offered', 'neighborhood_overview', 'notes',
+df = pd.read_csv("listings.csv")
+bad_features = ['scrape_id', 'last_scraped',
+      'experiences_offered', 'neighborhood_overview', 'notes',
      'transit', 'access', 'interaction', 'house_rules',  'host_url',
      'host_name', 'host_since', 'host_location', 'host_about', 'host_response_time',
      'host_response_rate', 'host_acceptance_rate', 'host_is_superhost',
@@ -34,5 +34,5 @@ df['street'] = df['street'].str.replace(',','')
 df['neighbourhood'] = df['neighbourhood'].str.replace('/',' ')
 df.dropna(inplace =True)
 
-df.to_csv(path_or_buf='listings_clean.csv')
+df.to_csv(path_or_buf='listings_clean.csv', index=False)
 print(df.columns.values)

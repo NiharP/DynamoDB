@@ -1,0 +1,33 @@
+<div class='content'>
+    <div>
+        <div>
+            <h2>{{listingDetails.Name}} </h2>
+            <h3> {{listingDetails.Locator}}</h3>
+        </div>
+        <br>
+        <div>
+            <label> Description: </label>
+            <p>{{listingDetails.Descriptor}}</p>
+        </div>
+        <br>
+        <div>
+            <P> <h3>{{listingDetails.PropertyInfo.price}} /day</h3> </P>
+        </div>
+        <br>
+        <div>
+            <label>Address:</label>
+            <p> {{listingDetails.PropertyInfo.address.line1}} </p>
+            <p> {{listingDetails.PropertyInfo.address.zipCode}} </p>
+            <!--<p> {{listingDetails.PropertyInfo.address.zipCode}} </p>-->
+        </div>
+        <br>
+        <div>
+            <label>Property Type: </label>
+            <h3>{{listingDetails.PropertyInfo.type}} </h3>
+        </div>
+        <div>
+            <label>Room Type: </label>
+            <h3>{{listingDetails.PropertyInfo.roomType}} </h3>
+        </div>
+    </div>
+</div>

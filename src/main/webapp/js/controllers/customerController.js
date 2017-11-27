@@ -83,6 +83,11 @@ airbnbApp.controller('searchPropertyController',
      console.log('Called the Search Property Controller.');
      $scope.isResults  =  false;
      console.log($scope.city);
+     $scope.listingDetailIndex = $routeParams.index;
+     $scope.info = function (){
+        $scope.listingDetail = $scope.listings[$scope.listingDetailIndex];
+        $scope.listingDetail = $scope.listings[$scope.listingDetailIndex];
+     }
      $scope.search = function(){
 
        console.log("Inside Search Function.")
@@ -94,9 +99,21 @@ airbnbApp.controller('searchPropertyController',
          $scope.isResults = true;
          console.log(JSON.stringify(data));
        });
-     }
+     };
     }
 );
+
+airbnbApp.controller('ViewListingController',function($scope,$routeParams,$http){
+    $scope.listingId = $routeParams.listingId;
+    console.log("Listing details = "+ $routeParams.listingId);
+    console.log("View Listing Controller");
+    $http.get('http://localhost:8080/DynamoProject/rest/getListingsDetails/'+$scope.listingId).success(function(data, status, headers, config) {
+             console.log(data)
+             $scope.listingDetails = data;
+             $scope.isResults = true;
+             console.log(JSON.stringify(data));
+           });
+});
 
 airbnbApp.controller('AddListingController',
 function($scope,$http) {

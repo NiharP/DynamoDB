@@ -5,11 +5,15 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.document.*;
+import com.amazonaws.services.dynamodbv2.document.spec.GetItemSpec;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 import com.amazonaws.services.dynamodbv2.document.utils.NameMap;
 import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.amazonaws.services.dynamodbv2.model.*;
+import com.dynamo.model.Address;
 import com.dynamo.model.Listing;
+import com.dynamo.model.PropertyInfo;
+import com.google.gson.Gson;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -31,6 +35,7 @@ public class Connection {
             .build();
 
     public static DynamoDB dynamoDB = new DynamoDB(client);
+    public static Gson gson = new Gson();
 
 
     static SimpleDateFormat dateFormatter = new SimpleDateFormat(
@@ -51,7 +56,7 @@ public class Connection {
             // Parameter6/7: range key and type (if applicable)
 
             createTable(reviews, 10L, 5L, "Id", "N");
-            createTable(listings, 10L, 5L, "Id", "N", "PinCode", "N");
+            createTable(listings, 10L, 5L, "Id", "N");
 
             loadSampleReviews(reviews);
             loadSampleListings(listings);
@@ -70,16 +75,16 @@ public class Connection {
     public Boolean addListing(Listing listing) {
         Table table = dynamoDB.getTable(listings);
 
+        PropertyInfo propertyInfo = listing.getPropertyInfo();
+
         Item item = new Item()
                 .withPrimaryKey("Id", listing.getId())
-                .withString("Name",listing.getName())
+                .withString("Name", listing.getName())
                 .withString("City", listing.getCity())
                 .withString("Location", listing.getLocation())
-                .withString("Address", listing.getAddress())
-                .withNumber("PinCode", listing.getPinCode())
-                .withNumber("Price", listing.getPrice())
-                .withString("Descriptor", listing.getDescriptor())
-                .withString("HouseType", listing.getHouseType());
+                .withJSON("PropertyInfo", gson.toJson(propertyInfo))
+                .withNumber("ZipCode", listing.getZipCode())
+                .withString("Descriptor", listing.getDescriptor());
         table.putItem(item);
         return true;
 
@@ -219,7 +224,7 @@ public class Connection {
                     .withString("Location", "John Street")
                     .withString("City", "New York")
                     .withJSON("PropertyInfo", JOHN_PROPERTY)
-                    .withNumber("PinCode", 14623L)
+                    .withNumber("ZipCode", 14623L)
                     .withStringSet("Reviews", REVIEWS)
                     .withBoolean("IsAvailable", true)
                     .withString("HouseType", "OwnedHouse");
@@ -232,7 +237,7 @@ public class Connection {
                     .withString("Location", "John Street")
                     .withString("City", "New York")
                     .withJSON("PropertyInfo", JOHN_PROPERTY)
-                    .withNumber("PinCode", 14623L)
+                    .withNumber("ZipCode", 14623L)
                     .withStringSet("Reviews", REVIEWS)
                     .withBoolean("IsAvailable", true)
                     .withString("HouseType", "OwnedHouse");
@@ -245,7 +250,7 @@ public class Connection {
                     .withString("Location", "John Street")
                     .withJSON("PropertyInfo", JOHN_PROPERTY)
                     .withString("City", "Rochester")
-                    .withNumber("PinCode", 14623L)
+                    .withNumber("ZipCode", 14623L)
                     .withStringSet("Reviews", REVIEWS)
                     .withBoolean("IsAvailable", true)
                     .withString("HouseType", "OwnedHouse");
@@ -389,5 +394,18 @@ public class Connection {
             System.err.println(e.getMessage());
 
         }
+    }
+
+    public String getListingDetails(Long listingId) {
+        Table table = dynamoDB.getTable(listings);
+        GetItemSpec spec = new GetItemSpec().withPrimaryKey("Id", listingId);
+
+        System.out.println("Attempting to read the item...");
+        Item outcome = table.getItem(spec);
+
+        System.out.println("GetItem succeeded: " + outcome);
+
+
+        return outcome.toJSON();
     }
 }

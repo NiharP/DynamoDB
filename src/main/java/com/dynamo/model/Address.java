@@ -1,9 +1,6 @@
 package com.dynamo.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * Created by Niharp on 11/26/2017.
@@ -12,7 +9,11 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Address {
-    private String lane1;
-    private
+    private String line1;
+    private String city;
+    private String state;
+    private Long zipCode;
+    private String country;
 }

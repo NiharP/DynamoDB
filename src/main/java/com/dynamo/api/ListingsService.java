@@ -6,18 +6,16 @@ import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import com.dynamo.connection.Connection;
 import com.dynamo.model.Listing;
 import com.google.gson.Gson;
-import com.jayway.jsonpath.spi.json.GsonJsonProvider;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.Iterator;
 
 /**
  * Created by Niharp on 11/3/2017.
  */
 @Path("/")
-public class Listings {
+public class ListingsService {
     @Path("getListings/{city}")
     @GET
     @Consumes(MediaType.TEXT_PLAIN)
@@ -27,13 +25,25 @@ public class Listings {
         return getListingsByCity(city);
     }
 
+    @Path("getListingsDetails/{listingId}")
+    @GET
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
+    public String getListingsDetailsById(@PathParam("listingId") String listingId) {
+        return getListingsDetails(Long.parseLong(listingId));
+    }
+
+    private String getListingsDetails(Long listingId) {
+        return new Connection().getListingDetails(listingId);
+    }
+
     @Path("addListing")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public String addListing(String listing) {
         Listing listing1 = new Gson().fromJson(listing, Listing.class);
-        listing1.setId(11222L);
+        listing1.setId(System.currentTimeMillis());
         return addListingToDb(listing1);
 
     }
@@ -46,17 +56,18 @@ public class Listings {
     }
 
     public static void main(String[] args) {
-        Listing listing1 = new Listing();
-        listing1.setId(System.currentTimeMillis());
-        listing1.setName("Hello");
-        listing1.setCity("Rochester");
-        listing1.setLocation("RIT");
-        listing1.setDescriptor("Beautiful");
-        listing1.setHouseType("1 BHK Apartment");
-        listing1.setAddress("220 John Street");
-        listing1.setPinCode(123456L);
-        listing1.setPrice(122);
-        new Listings().addListingToDb(listing1);
+//        Listing listing1 = new Listing();
+//        listing1.setId(System.currentTimeMillis());
+//        listing1.setName("Hello");
+//        listing1.setCity("Rochester");
+//        listing1.setLocation("RIT");
+//        listing1.setDescriptor("Beautiful");
+//        listing1.setHouseType("1 BHK Apartment");
+//        listing1.setAddress("220 John Street");
+//        listing1.setPinCode(123456L);
+//        listing1.setPrice(122);
+//        new ListingsService().addListingToDb(listing1);
+        new ListingsService().getListingsDetailsById("5232121");
     }
 
     private static String getListingsByCity(String city) {
