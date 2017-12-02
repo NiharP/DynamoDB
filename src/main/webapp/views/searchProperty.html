@@ -11,15 +11,20 @@
             <h1>Listings</h1>
             <table>
                 <tr>
-                    <th>Name</th>
+                    <th>Descriptor</th>
                     <th>Location</th>
                     <th>House Type</th>
+                    <th>Room Type</th>
+                    <th>Price</th>
+
                 </tr>
                 <tr ng-repeat="listing in listings">
 
                     <td><a href="#/viewListing/{{listing.Id}}">{{listing.Name}}</a></td>
                     <td>{{listing.Location}}</td>
-                    <td>{{listing.HouseType}}</td>
+                    <td>{{listing.PropertyInfo.type}}</td>
+                    <td>{{listing.PropertyInfo.roomType}}</td>
+                    <td>{{listing.PropertyInfo.price}} / per day</td>
                 </tr>
             </table>
         </div>
